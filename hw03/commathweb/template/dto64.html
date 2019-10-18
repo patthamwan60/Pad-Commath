@@ -1,0 +1,44 @@
+{% extends 'demopage/base.html' %}
+
+{% block content %}
+
+    <section class="headline-sec">
+        <div class="overlay ">
+            <h3>แปลงเลขทศนิยมเป็น IEEE FLOATING POINT DOUBLE PRECISION (64-BIT)</h3>
+
+        </div>
+    </section>
+    <!--HOME SECTION END-->
+    <section>
+        <div class="container">
+            <div class="row">
+                 <div class="col-md-6" >
+                    <h2><strong> ผลลัพธ์ </strong></h2>
+                    <h4>s = {{s}}</h5>
+                    <h4>e = {{e}}</h4>
+                    <h4>f = {{f}}</h4>
+                    <br>
+                    <h2><strong> แปลงกลับเป็น </strong></h2>
+                    <h4>{{conb}}</h4>
+                </div>
+                <div class="col-md-6" >
+                    
+                    <div class="alert alert-info" >
+                        <div class="form-group">
+                            <strong>กรอกค่าที่ต้องการแปลง</strong>
+                            <br />
+                            
+                        <label></label>
+                        <form action='' method="post">
+                            {% csrf_token %}
+                            <input name="x" type="number" value='{{d}}' step=any class="form-control" placeholder="ค่าที่ต้องการแปลง"/>
+                            <br>
+                            <input type="submit" class="btn btn-primary" ></input>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
