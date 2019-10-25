@@ -1,0 +1,28 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+
+<div class="container">
+    <section class="headline-sec">
+        <div class="overlay ">
+            <h3>Differentiation</h3>
+        </div>
+    </section>
+    <br>
+    <section>
+            <h2>Second CDA</h2>
+            <form action='' method="post">
+                {% csrf_token %}
+                <div class="col-sm-4">
+                <h4> กรอกตัวเลขที่ต้องการแปลง</h4>
+                <input name="x" type="number" step=any class="form-control"/ value="{{d}}">
+                <br>
+                <button type="submit" class="btn btn-primary">คำนวณ</button>
+                </div>
+            </form>
+        <div class="col-sm-4">
+        <h2> ผลลัพธ์ </h2>
+        </div>
+        <br>
+    </section>
+</div>
+{% endblock %}
